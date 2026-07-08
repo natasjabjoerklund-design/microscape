@@ -1,0 +1,11 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Summer Engine local-only state (SummerGit, caches, locks)
+.summer/local/
+
+# Editor/OS backups and junk
+*.bak
+.DS_Store
+Thumbs.db
