@@ -33,6 +33,11 @@ func _ready() -> void:
 	button_c.pressed.connect(AudioManager.play_click)
 	for wall in _lights.keys():
 		_update_light(wall, GameManager.wall_states.get(wall, "red"))
+	# Reuse the room marker icons on the matching wall buttons so the sticker
+	# out in the room reads as the same control here (A=auth, B=turntable, C=heat).
+	_set_button_icon(button_a, "res://textures/marker_auth.png")
+	_set_button_icon(button_b, "res://textures/marker_turntable.png")
+	_set_button_icon(button_c, "res://textures/marker_heat.png")
 
 
 func _on_entered(camera: Camera3D) -> void:
@@ -62,3 +67,9 @@ func _update_light(wall: String, state: String) -> void:
 			light.color = COLOR_YELLOW
 		"green":
 			light.color = COLOR_GREEN
+
+
+func _set_button_icon(btn: Button, path: String) -> void:
+	if ResourceLoader.exists(path):
+		btn.icon = load(path)
+		btn.expand_icon = true
