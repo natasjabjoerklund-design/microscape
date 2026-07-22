@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=3]
+[gd_scene load_steps=94 format=3]
 
 [ext_resource type="Script" path="res://player.gd" id="1_player_script"]
 [ext_resource type="Script" path="res://turntable_puzzle.gd" id="3_turntable_script"]
@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" path="res://textures/marker_auth.png" id="39_marker_auth_texture"]
 [ext_resource type="Texture2D" path="res://textures/marker_breaker.png" id="40_marker_breaker_texture"]
 [ext_resource type="Script" path="res://panel_marker.gd" id="41_panel_marker_script"]
+[ext_resource type="FontFile" path="res://fonts/DSEG7Classic-Bold.ttf" id="42_dseg_font"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_floor"]
 size = Vector3(4, 0.2, 4)
@@ -411,8 +412,11 @@ script = ExtResource("5_status_display_script")
 
 [node name="TimerLabel" type="Label3D" parent="Interactables/Display"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.015)
-modulate = Color(0.2, 0.6, 1, 1)
-font_size = 44
+modulate = Color(0.35, 1, 0.45, 1)
+outline_modulate = Color(0.1, 0.55, 0.2, 0.5)
+outline_size = 14
+font = ExtResource("42_dseg_font")
+font_size = 36
 text = "3:00"
 
 [node name="Turntable" type="Node3D" parent="Interactables"]
