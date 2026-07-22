@@ -76,9 +76,9 @@ text = "You are Kernel. Escape the microwave before it dings."
 
 [node name="StartButton" type="Button" parent="."]
 anchor_left = 0.5
-anchor_top = 0.82
+anchor_top = 0.42
 anchor_right = 0.5
-anchor_bottom = 0.82
+anchor_bottom = 0.42
 offset_left = -80.0
 offset_top = -25.0
 offset_right = 80.0
